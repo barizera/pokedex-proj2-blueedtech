@@ -1,8 +1,6 @@
 import express from "express";
 import path from "path";
-import dotenv from "dotenv";
-
-dotenv.config();
+;
 const app = express();
 const __dirname = path.resolve(path.dirname(""));
 app.use(express.urlencoded({ extended: true })); //a info vai pro body por conta do extended:true
@@ -11,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 //Criando uma porta para o servidor
-const port = process.env.PORT || 3005
+const port = 3005
 app.listen(port, () => {
   console.log(`Rodando servidor na porta http://localhost:${port}.`);
 });
@@ -67,12 +65,12 @@ app.get("/", (req, res) => {
 setTimeout(() => {
     mensagem = "";
   }, 1000);
-  res.status(200).render("index.ejs", { pokedex, mensagem });
+  res.render("index.ejs", { pokedex, mensagem });
 });
 
 //renderizar a aba cadastrar
 app.get("/cadastrar", (req, res) => {
-  res.status(200).render("cadastrar.ejs");
+  res.render("cadastrar.ejs");
 });
 
 //renderizar a aba detalhes.
@@ -85,7 +83,7 @@ app.get("/detalhes/:id", (req, res) => {
     }
   });
   // resposta renderiza o arquivo, e a variável criada dentro da rota.
-  res.status(200).render("detalhes.ejs", { pokemon });
+  res.render("detalhes.ejs", { pokemon });
 });
 
 // ao invés de usar o get (receber) do servidor uma info, a gente está fazendo o user enviar ao servidor.
@@ -97,7 +95,7 @@ pokedex.push({id: newPokemonId, nome, tipo, imagem, descricao, altura, peso, cat
   //vai alterar a variável ao utilizar o botão cadastrar.
 mensagem = `Seu novo Pokémon foi cadastrado com sucesso.`
 //redireciona para a (home).
-res.status(200).redirect('/')
+res.redirect('/')
 
 });
 
