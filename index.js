@@ -67,12 +67,12 @@ app.get("/", (req, res) => {
 setTimeout(() => {
     mensagem = "";
   }, 1000);
-  res.render("index.ejs", { pokedex, mensagem });
+  res.status(200).render("index.ejs", { pokedex, mensagem });
 });
 
 //renderizar a aba cadastrar
 app.get("/cadastrar", (req, res) => {
-  res.render("cadastrar.ejs");
+  res.status(200).render("cadastrar.ejs");
 });
 
 //renderizar a aba detalhes.
@@ -85,7 +85,7 @@ app.get("/detalhes/:id", (req, res) => {
     }
   });
   // resposta renderiza o arquivo, e a variável criada dentro da rota.
-  res.render("detalhes.ejs", { pokemon });
+  res.status(200).render("detalhes.ejs", { pokemon });
 });
 
 // ao invés de usar o get (receber) do servidor uma info, a gente está fazendo o user enviar ao servidor.
@@ -97,7 +97,7 @@ pokedex.push({id: newPokemonId, nome, tipo, imagem, descricao, altura, peso, cat
   //vai alterar a variável ao utilizar o botão cadastrar.
 mensagem = `Seu novo Pokémon foi cadastrado com sucesso.`
 //redireciona para a (home).
-res.redirect('/')
+res.status(200).redirect('/')
 
 });
 
