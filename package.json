@@ -12,6 +12,7 @@
   "author": "Luiz Felipe Bari",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "heroku": "^7.60.1"

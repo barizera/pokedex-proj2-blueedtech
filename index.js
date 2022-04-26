@@ -1,6 +1,8 @@
 import express from "express";
 import path from "path";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 const __dirname = path.resolve(path.dirname(""));
 app.use(express.urlencoded({ extended: true })); //a info vai pro body por conta do extended:true
@@ -9,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 //Criando uma porta para o servidor
-const port = 3003 || 'https://secret-meadow-14961.herokuapp.com/'
+const port = 3003 || process.env.PORT 
 app.listen(port, () => {
   console.log(`Rodando servidor na porta http://localhost:${port}.`);
 });
