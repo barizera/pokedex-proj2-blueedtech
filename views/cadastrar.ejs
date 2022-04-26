@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Cadastre o Pokémon</title>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main id="mainCadastrar">
+      <!-- <h1>Cadastre um novo Pokémon</h1> -->
+      <form method="post" action="/cadastrar">
+        <fieldset>
+          <legend>Cadastre sua nova captura!</legend>
+          <fieldset class="parField">
+            <label for="nome">Nome</label>
+            <input required
+              type="text"
+              id="nomePokemon"
+              name="nome"
+              placeholder="Digite o nome do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="tipo">Tipo</label>
+            <input required
+              type="text"
+              id="tipoPokemon"
+              name="tipo"
+              placeholder="Digite o tipo do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="imagem">Link da imagem</label>
+            <input required
+              type="url"
+              id="imagemPokemon"
+              name="imagem"
+              placeholder="Digite o link da imagem"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="descricao">Descrição</label>
+            <input required
+              type="text"
+              id="descricaoPokemon"
+              name="descricao"
+              placeholder="Digite a descrição do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="altura">Altura</label>
+            <input required
+              type="text"
+              id="alturaPokemon"
+              name="altura"
+              placeholder="Digite a altura do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="peso">Peso</label>
+            <input required
+              type="text"
+              id="pesoPokemon"
+              name="peso"
+              placeholder="Digite o peso do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="categoria">Categoria</label>
+            <input required
+              type="text"
+              id="categoriaPokemon"
+              name="categoria"
+              placeholder="Digite a categoria do pokémon"
+            />
+          </fieldset>
+          <fieldset class="parField">
+            <label for="habilidade">Habilidade</label>
+            <input required
+              type="text"
+              id="habilidadePokemon"
+              name="habilidade"
+              placeholder="Digite a habilidade do pokémon"
+            />
+          </fieldset>
+        </fieldset>
+        <div id="button">
+        <button type="submit" id="btnCadastrar">Cadastrar</button>
+        </div>
+      </form>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

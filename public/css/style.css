@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: goldman, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --cor0: #e21a1a;
+  --cor1: #faf84b;
+  --cor2: #fa3131;
+  --cor3: #19a3fa;
+  --cor4: #1a75ad;
+}
+
+body {
+  width: 99vw;
+  height: 100vh;
+
+}
+
+/* #### HEADER #### */
+header {
+  background: #e21a1a;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header a {
+  text-decoration: none;
+  list-style: none;
+}
+
+header li {
+  color: white;
+}
+
+
+header li:hover {
+  color: black;
+  transform: scale(1.15);
+  transition: 0.4s;
+}
+
+header h1 {
+  color: white;
+  text-shadow: 3px 3px 2px black;
+}
+
+header div#divLogo:hover {
+  transform: scale(1.2);
+}
+
+div#divLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 50%;
+  color: white;
+}
+
+div#logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 3px #19a3fa; */
+}
+
+div#divNav {
+  /* border: #faf84b solid 3px; */
+  width: 100%;
+  text-align: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 25px;
+
+}
+
+.pokeball {
+  width: 50px;
+  height: 50px;
+}
+
+/* #### MAIN HOME #### */
+
+main {
+  min-height: 80%;
+  background-image: url("/img/bgMain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+
+section#pokemons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+main article.cards {
+  width: 240px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e21a1a;
+  border-radius: 10px;
+  background-image: url("/img/pokeballbg.jpg");
+  background-size: cover;
+  margin: 10px;
+  box-shadow: 3px 3px 5px #000000d3;
+
+}
+
+main article.cards:hover {
+  transform: scale(1.2);
+  transition: .7s;
+}
+
+main section a {
+  text-decoration: none; 
+}
+
+main img {
+  width: 200px;
+  height: 200px;
+
+}
+
+div#nomePoke {
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(188, 3, 3, 0.586);
+}
+
+div#tipoPoke {
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+
+  background-color: rgba(188, 3, 3, 0.586);
+}
+
+/* #### MAIN CADASTRAR #### */
+main fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+main form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+
+main form fieldset {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 60%;
+  border: none;
+  gap: 5px;
+}
+
+main form fieldset legend {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  padding-top: 10px
+}
+
+
+
+
+
+/* #### FOOTER #### */
+
+footer {
+  background-color: #e21a1a;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+footer p {
+  color: white;
+  font-weight: 250;
+  font-size: 10px;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: black;
+}
+
+
+
+main fieldset fieldset {
+  border: none;
+}
+
+
+
+form label {
+  width: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-family: Goldman;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  color: black;
+
+}
+
+form input {
+  width: 55%;
+  height: 30px;
+  min-width: 300px;
+  max-width: 550px;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.753);
+  border-radius: 20px;
+  font-size: 19px;
+  padding: 8px;
+  outline: none;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.432);
+}
+
+::placeholder {
+  color: rgba(157, 156, 156, 0.811);
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+button#btnCadastrar {
+  background-color: #e21a1a;
+  height: 55px;
+  width: 145px;
+  color: white;
+  font-size: 20px;
+  border-radius: 25px;
+  margin: 30px 0;
+  
+  
+}
+
+#button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button#btnCadastrar:hover {
+  background-color: #faf84b;
+  color: black;
+  transition: 0.7s;
+  border-color: black solid 3px;
+}
+
+main#detalhes {
+  width: 100%;
+  height:  80vh;
+}
+
+main div#containerDetalhes {
+  display: flex;
+  justify-content: center;
+}
+
+main div div#nomeimgDetalhes {
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+main div div#tabelaDetalhes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+main tbody {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    background-color: #e21a1a;
+    width: 70%;
+}
+main thead {
+  text-align: center;
+}
+
+
+
+section#mensagem {
+  padding: 1.5rem;
+  background-color: var(--cor1);
+  color: var(--cor3);
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span#close {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+span#close:hover{
+  color: rgb(255, 0, 0);
+  transform: scale(1.5);
+} 
+
+#containerDetalhes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
+div#tabelaDetalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 691px){
+#pokeQuadro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+}
+#imgDetalhes {
+width: 300px;
+height: 300px;
+position: static;
+}
+
+#quadroDetalhes {
+  background-color: #d2dbd2b9;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(209, 47, 47, 0.8);
+  padding: 10px;
+  font-size: 15px
+}
+
+@media screen and (max-width: 690px) {
+  #pokeQuadro {
+    width: 80%;
+  }
+}
