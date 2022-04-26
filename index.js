@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 //Criando uma porta para o servidor
-const port = 3003 || process.env.PORT 
+const port = 3003; 
 app.listen(port, () => {
   console.log(`Rodando servidor na porta http://localhost:${port}.`);
 });
